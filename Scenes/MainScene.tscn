@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scenes/Player.tscn" type="PackedScene" id=1]
+
+[node name="MainScene" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource( 1 )]
+position = Vector2( 220, 485 )
+
+[node name="SoundEffects" type="AudioStreamPlayer2D" parent="."]
+bus = "SFX"
+
+[node name="BackgroundMusic" type="AudioStreamPlayer2D" parent="."]
+bus = "Music"
