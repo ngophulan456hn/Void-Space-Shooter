@@ -841,6 +841,7 @@ animation = "FullHearth"
 z_index = -1
 frames = SubResource( 61 )
 animation = "AutoCannon"
+speed_scale = 2.0
 
 [node name="Engines" type="AnimatedSprite" parent="Bases"]
 position = Vector2( 0, 5 )
@@ -861,10 +862,13 @@ animation = "Round"
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
 shape = SubResource( 143 )
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 0, -12 )
 shape = SubResource( 6 )
 
 [node name="Timer" type="Timer" parent="."]
+
+[connection signal="animation_finished" from="Bases/Weapons" to="." method="_on_Weapons_animation_finished"]
+[connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
 
 [editable path="Hurtbox"]
