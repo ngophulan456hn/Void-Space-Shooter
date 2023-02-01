@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Earth-Like planet - Without back glow.png-fdda6fd51e027a957ea88194389189e8.stex"
+path="res://.import/Earth-Like planet - Without back glow.png-1600abbecfd4ba4e0d73b18cf0d4919b.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Void_EnvironmentPack/Planets/PNGs/Earth-Like planet - Without back glow.png"
-dest_files=[ "res://.import/Earth-Like planet - Without back glow.png-fdda6fd51e027a957ea88194389189e8.stex" ]
+source_file="res://Sprites/Void_EnvironmentPack/Planets/Earth-Like planet - Without back glow.png"
+dest_files=[ "res://.import/Earth-Like planet - Without back glow.png-1600abbecfd4ba4e0d73b18cf0d4919b.stex" ]
 
 [params]
 

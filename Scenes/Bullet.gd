@@ -14,9 +14,9 @@ const BULLET_SPEED = 800
 
 func _ready():
 	bullet_effect()
+	Inventory.connect("weapon_changed", self, "bullet_effect")
 	
 func _physics_process(delta):
-	bullet_effect()
 	match state:
 		MOVE:
 			move_state(delta)

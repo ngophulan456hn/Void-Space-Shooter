@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Asteroid - Flame.png-d409fb6c7e1692fb932b1290a0120591.stex"
+path="res://.import/Starry background  - Layer 01 - Solid colour.png-dc873d04f3a2a770fddeebb6ec13ceff.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Void_EnvironmentPack/Effects/PNGs/Asteroid - Flame.png"
-dest_files=[ "res://.import/Asteroid - Flame.png-d409fb6c7e1692fb932b1290a0120591.stex" ]
+source_file="res://Sprites/Void_EnvironmentPack/Backgrounds/Split up/Starry background  - Layer 01 - Solid colour.png"
+dest_files=[ "res://.import/Starry background  - Layer 01 - Solid colour.png-dc873d04f3a2a770fddeebb6ec13ceff.stex" ]
 
 [params]
 

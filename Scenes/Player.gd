@@ -10,20 +10,23 @@ onready var engines := $Bases/Engines
 onready var engineEffects := $Bases/Engines/EngineEffects
 onready var shields := $Bases/Shields
 onready var hurtBox := $Hurtbox
-onready var timer := $Timer
+onready var bulletTimer := $BulletTimer
 onready var collisionShape2D := $CollisionShape2D
+onready var firingPosition := $FiringPosition
 
 enum { MOVE, POWERING }
 
 var state = MOVE
 var velocity = Vector2.ZERO
+var shoot_again = true
 var weapon_animation_finished = true
 
 const MAX_HEALTH = 4
-const MAX_SPEED = 350
-const ACCELERATION_TIME = 2
-const ACCELERATION = 1000
+const MAX_SPEED = 400
+const ACCELERATION_TIME = 1.5
+const ACCELERATION = 2000
 const FRICTION = 5000
+const DELAY_SHOT = 0.1
 
 func _ready():
 	base.play("FullHearth")
@@ -39,7 +42,7 @@ func _ready():
 #	_on_weapon_changed()
 	engien_effect()
 
-func  _physics_process(delta):
+func _physics_process(delta):
 	var input = Vector2.ZERO
 	input.x = Input.get_axis("ui_left", "ui_right")
 	input.y = Input.get_axis("ui_up", "ui_down")
@@ -50,7 +53,7 @@ func  _physics_process(delta):
 		
 	if Input.is_action_pressed("ui_shoot"):
 		spawn_bullet()
-		_on_weapon_changed()
+#		_on_weapon_changed()
 	
 	match state:
 		MOVE:
@@ -117,8 +120,8 @@ func ship_condition():
 			base.play("VeryDamaged")
 	
 func _on_Hurtbox_area_entered(area):
-	print("_on_Hurtbox_area_entered")
-	#Stats.set_health(Stats.get_health() - 1)
+	print("_on_Hurtbox_area_entered", area)
+#	Stats.set_health(Stats.get_health() - 1)
 	hurtBox.start_invincibility(0.6)
 	
 func _on_no_health():
@@ -154,13 +157,18 @@ func _on_weapon_changed():
 		weapon_animation_finished = false
 		
 func spawn_bullet():
-	var bullet = Bullet.instance()
-	bullet.global_position = self.global_position
-	get_parent().add_child(bullet)
-	
+	if shoot_again:
+		bulletTimer.start(DELAY_SHOT)
+		shoot_again = false
+		for child in firingPosition.get_children():
+			var bullet = Bullet.instance()
+			get_parent().add_child(bullet)
+			bullet.global_position = child.global_position
 
 func _on_Weapons_animation_finished():
 	weapon_animation_finished = true
 	weapons.frame = 0
 	weapons.playing = false
 
+func _on_BulletTimer_timeout():
+	shoot_again = true

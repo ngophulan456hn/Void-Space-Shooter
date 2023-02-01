@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Starry background - Layer X - Big Star.png-3f0c0a1a719b88917e1c0c6ccf59b2ef.stex"
+path="res://.import/Starry background - Layer X -Black hole.png-c7650180e7116e1590db8999d2aaeb19.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Void_EnvironmentPack/Backgrounds/PNGs/Split up/Starry background - Layer X - Big Star.png"
-dest_files=[ "res://.import/Starry background - Layer X - Big Star.png-3f0c0a1a719b88917e1c0c6ccf59b2ef.stex" ]
+source_file="res://Sprites/Void_EnvironmentPack/Backgrounds/Split up/Starry background - Layer X -Black hole.png"
+dest_files=[ "res://.import/Starry background - Layer X -Black hole.png-c7650180e7116e1590db8999d2aaeb19.stex" ]
 
 [params]
 

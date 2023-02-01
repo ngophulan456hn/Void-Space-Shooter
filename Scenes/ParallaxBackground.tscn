@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Sprites/Void_EnvironmentPack/Backgrounds/Condesed/Starry background  - Layer 01 - Void.png" type="Texture" id=1]
+[ext_resource path="res://Sprites/Void_EnvironmentPack/Backgrounds/Condesed/Starry background  - Layer 03 - Stars.png" type="Texture" id=2]
+[ext_resource path="res://Sprites/Void_EnvironmentPack/Backgrounds/Condesed/Starry background  - Layer 02 - Stars.png" type="Texture" id=3]
+[ext_resource path="res://Scenes/ParallaxBackground.gd" type="Script" id=4]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+script = ExtResource( 4 )
+
+[node name="VoidLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 0, 5760 )
+
+[node name="Sprite" type="Sprite" parent="VoidLayer"]
+position = Vector2( 0, 600 )
+rotation = -1.5708
+scale = Vector2( 1, 1.24722 )
+texture = ExtResource( 1 )
+centered = false
+
+[node name="StarLayer" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 0, 5760 )
+
+[node name="Sprite" type="Sprite" parent="StarLayer"]
+position = Vector2( 0, 600 )
+rotation = -1.5708
+scale = Vector2( 1, 1.24722 )
+texture = ExtResource( 3 )
+centered = false
+
+[node name="StarLayer2" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2( 0, 5760 )
+
+[node name="Sprite" type="Sprite" parent="StarLayer2"]
+position = Vector2( 0, 600 )
+rotation = -1.5708
+scale = Vector2( 1, 1.24722 )
+texture = ExtResource( 2 )
+centered = false

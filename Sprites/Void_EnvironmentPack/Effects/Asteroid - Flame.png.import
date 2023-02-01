@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Starry background - Layer X -Rotary Star.png-d5eecd00daecc308b5ecbee25c593530.stex"
+path="res://.import/Asteroid - Flame.png-bfb95f5d3381436eba91d9fede33d221.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Void_EnvironmentPack/Backgrounds/PNGs/Split up/Starry background - Layer X -Rotary Star.png"
-dest_files=[ "res://.import/Starry background - Layer X -Rotary Star.png-d5eecd00daecc308b5ecbee25c593530.stex" ]
+source_file="res://Sprites/Void_EnvironmentPack/Effects/Asteroid - Flame.png"
+dest_files=[ "res://.import/Asteroid - Flame.png-bfb95f5d3381436eba91d9fede33d221.stex" ]
 
 [params]
 

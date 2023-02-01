@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Starry background - Layer X - Big Star 2.png-1ab46947bdb50c0095fca888cd375e9f.stex"
+path="res://.import/Starry background  - Layer 01 - Void.png-cf45753b61b567cf4ef89eaa39177f5c.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Void_EnvironmentPack/Backgrounds/PNGs/Split up/Starry background - Layer X - Big Star 2.png"
-dest_files=[ "res://.import/Starry background - Layer X - Big Star 2.png-1ab46947bdb50c0095fca888cd375e9f.stex" ]
+source_file="res://Sprites/Void_EnvironmentPack/Backgrounds/Condesed/Starry background  - Layer 01 - Void.png"
+dest_files=[ "res://.import/Starry background  - Layer 01 - Void.png-cf45753b61b567cf4ef89eaa39177f5c.stex" ]
 
 [params]
 
@@ -19,7 +19,7 @@ compress/lossy_quality=0.7
 compress/hdr_mode=0
 compress/bptc_ldr=0
 compress/normal_map=0
-flags/repeat=0
+flags/repeat=1
 flags/filter=true
 flags/mipmaps=false
 flags/anisotropic=false

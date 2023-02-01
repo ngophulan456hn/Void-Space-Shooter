@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Asteroid 01 - Explode.png-adf570c3a6f01beae0363122b70b7f45.stex"
+path="res://.import/Starry background - Layer X - Big Star 2.png-d56beba0e70ad93ea81470071f82f88a.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Void_EnvironmentPack/Asteroids/PNGs/Asteroid 01 - Explode.png"
-dest_files=[ "res://.import/Asteroid 01 - Explode.png-adf570c3a6f01beae0363122b70b7f45.stex" ]
+source_file="res://Sprites/Void_EnvironmentPack/Backgrounds/Split up/Starry background - Layer X - Big Star 2.png"
+dest_files=[ "res://.import/Starry background - Layer X - Big Star 2.png-d56beba0e70ad93ea81470071f82f88a.stex" ]
 
 [params]
 

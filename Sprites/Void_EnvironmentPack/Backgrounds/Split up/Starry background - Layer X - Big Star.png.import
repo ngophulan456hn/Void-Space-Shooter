@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Starry background  - Layer 02 - Shadows 2.png-9f1deeff4d6b244affd66a933c1e9772.stex"
+path="res://.import/Starry background - Layer X - Big Star.png-ff88768259d29f99c59ec1aceb9ced77.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Void_EnvironmentPack/Backgrounds/PNGs/Split up/Starry background  - Layer 02 - Shadows 2.png"
-dest_files=[ "res://.import/Starry background  - Layer 02 - Shadows 2.png-9f1deeff4d6b244affd66a933c1e9772.stex" ]
+source_file="res://Sprites/Void_EnvironmentPack/Backgrounds/Split up/Starry background - Layer X - Big Star.png"
+dest_files=[ "res://.import/Starry background - Layer X - Big Star.png-ff88768259d29f99c59ec1aceb9ced77.stex" ]
 
 [params]
 

@@ -854,10 +854,13 @@ frames = SubResource( 103 )
 animation = "BaseEngineIdle"
 
 [node name="Shields" type="AnimatedSprite" parent="Bases"]
+visible = false
 frames = SubResource( 142 )
 animation = "Round"
 
 [node name="Hurtbox" parent="." instance=ExtResource( 26 )]
+collision_layer = 4
+collision_mask = 0
 
 [node name="CollisionShape2D" parent="Hurtbox" index="0"]
 shape = SubResource( 143 )
@@ -866,9 +869,21 @@ shape = SubResource( 143 )
 position = Vector2( 0, -12 )
 shape = SubResource( 6 )
 
-[node name="Timer" type="Timer" parent="."]
+[node name="BulletTimer" type="Timer" parent="."]
+
+[node name="FiringPosition" type="Node2D" parent="."]
+
+[node name="LeftGun" type="Node2D" parent="FiringPosition"]
+position = Vector2( -8, -32 )
+
+[node name="RightGun" type="Node2D" parent="FiringPosition"]
+position = Vector2( 8, -32 )
+
+[node name="CenterGun" type="Node2D" parent="FiringPosition"]
+position = Vector2( 0, -40 )
 
 [connection signal="animation_finished" from="Bases/Weapons" to="." method="_on_Weapons_animation_finished"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]
+[connection signal="timeout" from="BulletTimer" to="." method="_on_BulletTimer_timeout"]
 
 [editable path="Hurtbox"]

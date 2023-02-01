@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Starry background  - Layer 01 - Void.png-65b0d2e50627e7e124a91c3f7b2d29fb.stex"
+path="res://.import/Starry background  - Layer 03 - Stars.png-44e1f28cb36283d6f317d24281581280.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Sprites/Void_EnvironmentPack/Backgrounds/PNGs/Condesed/Starry background  - Layer 01 - Void.png"
-dest_files=[ "res://.import/Starry background  - Layer 01 - Void.png-65b0d2e50627e7e124a91c3f7b2d29fb.stex" ]
+source_file="res://Sprites/Void_EnvironmentPack/Backgrounds/Split up/Starry background  - Layer 03 - Stars.png"
+dest_files=[ "res://.import/Starry background  - Layer 03 - Stars.png-44e1f28cb36283d6f317d24281581280.stex" ]
 
 [params]
 
