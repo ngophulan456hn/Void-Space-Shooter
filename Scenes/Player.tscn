@@ -1,4 +1,4 @@
-[gd_scene load_steps=166 format=2]
+[gd_scene load_steps=167 format=2]
 
 [ext_resource path="res://Sprites/Void_MainShip/Main Ship/Main Ship - Bases/Main Ship - Base - Slight damage.png" type="Texture" id=1]
 [ext_resource path="res://Sprites/Void_MainShip/Main Ship/Main Ship - Bases/Main Ship - Base - Full health.png" type="Texture" id=2]
@@ -26,6 +26,7 @@
 [ext_resource path="res://Sprites/Void_MainShip/Main Ship/Main Ship - Engine Effects/Main Ship - Engines - Burst Engine - Powering.png" type="Texture" id=24]
 [ext_resource path="res://Scenes/Player.gd" type="Script" id=25]
 [ext_resource path="res://Scenes/Hurtbox.tscn" type="PackedScene" id=26]
+[ext_resource path="res://Scenes/Stats.tscn" type="PackedScene" id=27]
 
 [sub_resource type="AtlasTexture" id=7]
 flags = 4
@@ -829,6 +830,8 @@ extents = Vector2( 16, 12 )
 extents = Vector2( 16, 12 )
 
 [node name="Player" type="KinematicBody2D"]
+collision_layer = 3
+collision_mask = 33
 script = ExtResource( 25 )
 
 [node name="Bases" type="AnimatedSprite" parent="."]
@@ -881,6 +884,8 @@ position = Vector2( 8, -32 )
 
 [node name="CenterGun" type="Node2D" parent="FiringPosition"]
 position = Vector2( 0, -40 )
+
+[node name="Stats" parent="." instance=ExtResource( 27 )]
 
 [connection signal="animation_finished" from="Bases/Weapons" to="." method="_on_Weapons_animation_finished"]
 [connection signal="area_entered" from="Hurtbox" to="." method="_on_Hurtbox_area_entered"]

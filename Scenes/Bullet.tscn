@@ -168,3 +168,5 @@ animation = "BigSpaceGun"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource( 27 )
+
+[connection signal="area_entered" from="." to="." method="_on_Bullet_area_entered"]

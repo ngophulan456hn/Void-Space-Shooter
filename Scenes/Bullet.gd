@@ -38,3 +38,7 @@ func bullet_effect():
 			animatedSprite.play("Rocket")
 		"Zapper":
 			animatedSprite.play("Zapper")
+
+
+func _on_Bullet_area_entered(area):
+	queue_free()

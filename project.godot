@@ -10,6 +10,11 @@ config_version=4
 
 _global_script_classes=[ {
 "base": "Area2D",
+"class": "Asteroid",
+"language": "GDScript",
+"path": "res://Scenes/Asteroids.gd"
+}, {
+"base": "Area2D",
 "class": "Bullet",
 "language": "GDScript",
 "path": "res://Scenes/Bullet.gd"
@@ -20,6 +25,7 @@ _global_script_classes=[ {
 "path": "res://Scenes/Player.gd"
 } ]
 _global_script_class_icons={
+"Asteroid": "",
 "Bullet": "",
 "Player": ""
 }
@@ -32,7 +38,6 @@ config/icon="res://icon.png"
 
 [autoload]
 
-Stats="*res://Scripts/Stats.gd"
 Inventory="*res://Scripts/Inventory.gd"
 
 [display]

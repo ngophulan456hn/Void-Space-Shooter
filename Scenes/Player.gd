@@ -13,6 +13,7 @@ onready var hurtBox := $Hurtbox
 onready var bulletTimer := $BulletTimer
 onready var collisionShape2D := $CollisionShape2D
 onready var firingPosition := $FiringPosition
+onready var stats := $Stats
 
 enum { MOVE, POWERING }
 
@@ -31,10 +32,10 @@ const DELAY_SHOT = 0.1
 func _ready():
 	base.play("FullHearth")
 	shields.visible = false
-	Stats.connect("no_health", self, "_on_no_health")
-	Stats.connect("health_changed", self, "_on_health_changed")
-	Stats.set_max_health(MAX_HEALTH)
-	Stats.set_spawn_position(self.global_position)
+	stats.connect("no_health", self, "_on_no_health")
+	stats.connect("health_changed", self, "_on_health_changed")
+	stats.set_max_health(MAX_HEALTH)
+	stats.set_spawn_position(self.global_position)
 	Inventory.connect("engnie_changed", self, "_on_engnie_changed")
 	Inventory.connect("weapon_changed", self, "_on_weapon_changed")
 	engineEffects.speed_scale = ACCELERATION_TIME
@@ -109,7 +110,7 @@ func engien_effect():
 				engineEffects.play("SuperchargedPowering")
 
 func ship_condition():
-	match Stats.get_health():
+	match stats.get_health():
 		4:
 			base.play("FullHearth")
 		3:
@@ -121,13 +122,16 @@ func ship_condition():
 	
 func _on_Hurtbox_area_entered(area):
 	print("_on_Hurtbox_area_entered", area)
-#	Stats.set_health(Stats.get_health() - 1)
+	stats.set_health(stats.get_health() - 1)
+	print("Player health: ", stats.get_health())
 	hurtBox.start_invincibility(0.6)
 	
 func _on_no_health():
-	self.global_position = Stats.get_spawn_position()
-	Stats.set_max_health(Stats.get_max_health())
-	Stats.set_health(Stats.get_max_health())
+#	self.global_position = stats.get_spawn_position()
+#	stats.set_max_health(stats.get_max_health())
+#	stats.set_health(stats.get_max_health())
+	queue_free()
+	get_tree().paused = true
 
 func _on_health_changed():
 	ship_condition()

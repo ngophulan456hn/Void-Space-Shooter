@@ -1,8 +1,17 @@
 extends Area2D
 
-func _ready():
-	pass # Replace with function body.
+onready var collisionShape2D := $CollisionShape2D
 
-func _on_Hitbox_body_entered(body):
-	if body is Player:
-		body.player_die()
+export var damage = 1 setget set_damage, get_damage
+
+func set_damage(value: int):
+	if value <= 0 :
+		print('Cannot set damage less than 0')
+	else:
+		damage = value
+		
+func get_damage() -> int:
+	return damage
+
+func disable_collision():
+	collisionShape2D.disabled = true
